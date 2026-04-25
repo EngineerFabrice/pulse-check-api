@@ -1,23 +1,32 @@
+import json
+import logging
 from datetime import datetime
+
+logger = logging.getLogger("pulse_check_api.alerts")
 
 
 class AlertService:
-
-    def create_alert(self, monitor_id: str, message: str):
+    def create_alert(
+        self,
+        monitor_id: str,
+        message: str,
+        reason: str = "timeout",
+    ):
         alert = {
-            "monitor_id": monitor_id,
-            "message": message,
-            "time": datetime.utcnow().isoformat()
+            "ALERT": message,
+            "time": datetime.utcnow().isoformat() + "Z",
+            "device_id": monitor_id,
+            "reason": reason,
         }
 
-        print(alert)  # simulate webhook/email
-        return alert
+        logger.critical(json.dumps(alert))
+        return {**alert, "message": message}
 
-    def trigger_alert(self, monitor_id: str):
-        alert = {
-            "ALERT": f"Device {monitor_id} is down!",
-            "time": datetime.utcnow().isoformat()
-        }
-
-        print(alert)  # simulate webhook/email
-        return alert
+    def trigger_alert(
+        self,
+        monitor_id: str,
+        reason: str = "timeout",
+        alert_email: str | None = None,
+    ):
+        message = f"Device {monitor_id} is down!"
+        return self.create_alert(monitor_id, message, reason)
