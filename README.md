@@ -128,27 +128,13 @@ Success response:
 }
 ```
 
-Error responses:
+Error response:
 
 - `404 Not Found`
 
 ```json
 {
   "detail": "Monitor not found"
-}
-```
-
-- `422 Unprocessable Entity`
-
-```json
-{
-  "detail": [
-    {
-      "loc": ["body", "id"],
-      "msg": "field required",
-      "type": "value_error.missing"
-    }
-  ]
 }
 ```
 
@@ -166,27 +152,13 @@ Success response:
 }
 ```
 
-Error responses:
+Error response:
 
 - `404 Not Found`
 
 ```json
 {
   "detail": "Monitor not found"
-}
-```
-
-- `422 Unprocessable Entity`
-
-```json
-{
-  "detail": [
-    {
-      "loc": ["body", "id"],
-      "msg": "field required",
-      "type": "value_error.missing"
-    }
-  ]
 }
 ```
 
@@ -353,32 +325,6 @@ tests/
 ---
 
 # Author
-
-Fabrice Ndayisaba
-Computer & Software Engineering Student
-Stop heartbeat → timer expires
-Alert is triggered
-Retry alert fires if device stays down
-📁 Project Structure
-
-app/
-├── api/
-├── core/
-├── models/
-├── schemas/
-├── services/
-├── state/
-├── utils/
-├── workers/
-
-tests/
-
-🚀 Tech Stack
-Python 3.10+
-FastAPI
-Uvicorn
-AsyncIO
-📌 Author
 
 Fabrice Ndayisaba
 Computer & Software Engineering Student
