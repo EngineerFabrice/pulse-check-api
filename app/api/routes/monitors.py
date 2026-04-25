@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from app.schemas.monitor_schema import MonitorCreate
 from app.services.monitor_service import MonitorService
 

@@ -32,6 +32,13 @@ class MonitorService:
 
         return {"message": "Heartbeat received"}
 
+    def receive_heartbeat(self, monitor_id: str):
+        if monitor_id not in monitors:
+            return True
+
+        result = self.heartbeat(monitor_id)
+        return result.get("message") == "Heartbeat received"
+
     def pause_monitor(self, monitor_id: str):
         if monitor_id not in monitors:
             return {"error": "Monitor not found"}
