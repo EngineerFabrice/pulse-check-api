@@ -1,0 +1,61 @@
+# Flutter/Dart
+.dart_tool/
+.build/
+*.log
+*.pid
+*.swp
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.build/
+
+# Android
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# iOS
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/AppFrameworkInfo.plist
+**/ios/Flutter/Debug.xcconfig
+**/ios/Flutter/Release.xcconfig
+**/ios/Flutter/Profile.xcconfig
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+**/macos/Flutter/Generated.xcconfig
+**/macos/Flutter/ephemeral
+**/macos/Flutter/flutter_export_environment.sh
+
+# Web
+**/web/index.html
+**/web/manifest.json
+**/web/favicon.png
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# Build
+/build/
+/app/build/
+**/build/
+
+# Misc
+.DS_Store
