@@ -1,10 +1,38 @@
+# =====================
+# Virtual Environment
+# =====================
 .venv/
+venv/
+env/
+
+# =====================
+# Python Cache
+# =====================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# =====================
+# Environment Variables
+# =====================
 .env
+
+# =====================
+# IDE / Editor
+# =====================
 .vscode/
 .idea/
-Downloads/
-Desktop/
-Pictures/
-Videos/
+
+# =====================
+# Testing / Coverage
+# =====================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =====================
+# OS Files
+# =====================
+.DS_Store
+Thumbs.db
